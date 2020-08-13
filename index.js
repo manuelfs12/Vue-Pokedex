@@ -19,7 +19,11 @@ new Vue({
       fetch(pokemonUrl)
         .then((res) => res.json())
         .then((data) => {
-          this.pokedex.push({ name: data.name, id: data.id });
+          this.pokedex.push({
+            name: data.name,
+            id: data.id,
+            image: data.sprites.front_default,
+          });
           this.pokedex.sort((a, b) => (a.id > b.id ? 1 : -1));
         });
     },
