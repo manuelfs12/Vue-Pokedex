@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="getPokedex">Get the 151 OG Pokemons</button>
+    <ol>
+      <li v-for="pokemon in pokedex">
+        {{`${pokemon.id} - ${pokemon.name}`}}
+      </li>
+    </ol>
+  </div>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
