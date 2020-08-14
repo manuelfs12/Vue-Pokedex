@@ -16,7 +16,7 @@
     <button @click.once="getPokedex">Get the 151 OG Pokemons</button>
     <div class="grid">
       <div class="pokemon" v-for="pokemon in pokedex" :key="pokemon.id">
-        <h2>{{pokemon.id}}</h2>
+        <h3>{{pokemon.id}}</h3>
         <img class="sprite" :src="pokemon.image" :alt="pokemon.name + ' sprite image'" srcset="">
         <h2>{{pokemon.name}}</h2>
       </div>
