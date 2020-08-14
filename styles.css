@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+  background-color: #a0d9fc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pokemon {
+  display: grid;
+  justify-content: center;
+  background-color: #4ea654;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.sprite {
+  margin: auto;
+}
+
+.pokemon h2:first-letter {
+  text-transform: capitalize;
+}
+
+h2 {
+  margin: 0;
+  padding: 10px;
+}
+h1 {
+  text-align: center;
+}

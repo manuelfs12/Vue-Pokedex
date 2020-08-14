@@ -2,11 +2,12 @@ new Vue({
   el: '#app',
   data: {
     pokedex: [],
+    title: 'Vue Pokedex',
   },
 
   methods: {
     getPokedex() {
-      fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+      fetch(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=151`)
         .then((res) => res.json())
         .then((data) => {
           data.results.forEach((pokemon) => {
@@ -27,9 +28,5 @@ new Vue({
           this.pokedex.sort((a, b) => (a.id > b.id ? 1 : -1));
         });
     },
-
-    // sortPokemon(pokedex) {
-    //   this.sortedPokemon = pokedex.sort((a, b) => (a.id < b.id ? 1 : -1));
-    // },
   },
 });
