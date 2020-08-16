@@ -13,7 +13,7 @@
 <body>
   <div id="app">
     <h1>{{ title }}</h1>
-    <button @click.once="getPokedex">Get the 151 OG Pokemons</button>
+    <button @click="getPokedex(kantoUrl)">Get the 151 OG Pokemons</button>
     <div class="grid">
       <div class="pokemon" v-for="pokemon in pokedex" :key="pokemon.id">
         <h3>{{pokemon.id}}</h3>

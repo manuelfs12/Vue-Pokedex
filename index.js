@@ -3,11 +3,15 @@ new Vue({
   data: {
     pokedex: [],
     title: 'Vue Pokedex',
+    kantoUrl: 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=151',
   },
 
   methods: {
-    getPokedex() {
-      fetch(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=151`)
+    getPokedex(url) {
+      if (this.pokedex.length > 0) {
+        this.pokedex = [];
+      }
+      fetch(url)
         .then((res) => res.json())
         .then((data) => {
           data.results.forEach((pokemon) => {
