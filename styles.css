@@ -33,12 +33,6 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  margin: 0;
-  padding: 10px;
-  color: #ffffff;
-}
-
 h3 {
   margin: 0;
   padding: 10px;
@@ -46,13 +40,12 @@ h3 {
 }
 
 button {
-  padding: 20px 26px;
   border: 3px solid #d90d43;
   border-radius: 2rem;
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  background-color: #a0d9fc;
+  background-color: #a0d9fc00;
   transition-duration: 0.4s;
   transition-property: background-color, color;
   font-size: 14px;
@@ -62,4 +55,20 @@ button {
 button:hover {
   background-color: #d90d43;
   color: #ffffff;
+}
+
+header button {
+  padding: 1rem;
+}
+
+.pokemon button {
+  padding: 1rem;
+  width: 125px;
+}
+
+a,
+a:first-letter {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: capitalize;
 }
