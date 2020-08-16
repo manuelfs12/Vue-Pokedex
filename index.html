@@ -24,8 +24,8 @@
       <div class="pokemon" v-for="pokemon in pokedex" :key="pokemon.id">
         <h3>{{pokemon.id}}</h3>
         <img class="sprite" :src="pokemon.image" :alt="pokemon.name + ' sprite image'" srcset="">
-        <button><a :href="`https://www.pokemon.com/us/pokedex/${pokemon.name}`" target="_blank"
-            rel="noreferrer noopener">{{pokemon.name}}</a></button>
+        <a :href="`https://www.pokemon.com/us/pokedex/${pokemon.name}`" target="_blank"
+          rel="noreferrer noopener"><button>{{pokemon.name}}</button></a>
       </div>
     </div>
   </div>

@@ -25,10 +25,6 @@ body {
   margin: auto;
 }
 
-.pokemon h2:first-letter {
-  text-transform: capitalize;
-}
-
 h1 {
   text-align: center;
 }
@@ -64,11 +60,13 @@ header button {
 .pokemon button {
   padding: 1rem;
   width: 125px;
+  color: #ffffff;
 }
 
-a,
-a:first-letter {
-  text-decoration: none;
-  color: #ffffff;
+.pokemon button:first-letter {
   text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
 }
