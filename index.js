@@ -4,6 +4,8 @@ new Vue({
     pokedex: [],
     title: 'Vue Pokedex',
     kantoUrl: 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=151',
+    johtoUrl: 'https://pokeapi.co/api/v2/pokemon?offset=151&limit=100',
+    hoennUrl: 'https://pokeapi.co/api/v2/pokemon?offset=251&limit=135',
   },
 
   methods: {

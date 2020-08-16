@@ -55,6 +55,7 @@ button {
   background-color: #a0d9fc;
   transition-duration: 0.4s;
   transition-property: background-color, color;
+  font-size: 14px;
 }
 
 button:hover {
