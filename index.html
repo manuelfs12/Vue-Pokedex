@@ -22,10 +22,15 @@
     </header>
     <div class="grid">
       <div class="pokemon" v-for="pokemon in pokedex" :key="pokemon.id">
-        <h3>{{pokemon.id}}</h3>
-        <img class="sprite" :src="pokemon.image" :alt="pokemon.name + ' sprite image'" srcset="">
-        <a :href="`https://www.pokemon.com/us/pokedex/${pokemon.name}`" target="_blank"
-          rel="noreferrer noopener"><button>{{pokemon.name}}</button></a>
+        <div :id="pokemon.id">
+          <h3>{{pokemon.id}}</h3>
+          <img class="sprite" :src="pokemon.image" :alt="pokemon.name + ' sprite image'" srcset="">
+          <a :href="`https://www.pokemon.com/us/pokedex/${pokemon.name}`" target="_blank" rel="noreferrer noopener">
+            <h2>
+              <button>{{pokemon.name}}</button>
+            </h2>
+          </a>
+        </div>
       </div>
     </div>
   </div>

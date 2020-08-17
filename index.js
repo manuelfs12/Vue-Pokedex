@@ -6,11 +6,14 @@ new Vue({
     kantoUrl: 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=151',
     johtoUrl: 'https://pokeapi.co/api/v2/pokemon?offset=151&limit=100',
     hoennUrl: 'https://pokeapi.co/api/v2/pokemon?offset=251&limit=135',
+    lastRegionClicked: '',
   },
 
   methods: {
     getPokedex(url) {
-      if (this.pokedex.length > 0) {
+      if (this.lastRegionClicked === url) {
+        return;
+      } else {
         this.pokedex = [];
       }
       fetch(url)
@@ -20,6 +23,7 @@ new Vue({
             this.getPokemonUrl(pokemon.url);
           });
         });
+      this.lastRegionClicked = url;
     },
 
     getPokemonUrl(pokemonUrl) {
