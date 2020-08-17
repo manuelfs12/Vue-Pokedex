@@ -51,6 +51,7 @@ button {
 button:hover {
   background-color: #d90d43;
   color: #ffffff;
+  cursor: pointer;
 }
 
 header button {
